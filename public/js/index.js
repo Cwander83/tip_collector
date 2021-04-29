@@ -14,7 +14,7 @@ function showSignUp() {
 
 function lostPassword() {
 	let recovery = document.getElementById('lost-password');
-
+	document.getElementsByClassName
 	recovery.style.display === 'none'
 		? (recovery.style.display = 'block')
 		: (recovery.style.display = 'none');
