@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const firebaseDb = require('./firebase.js')
+//const firebaseDb = require('./firebase.js')
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 	res.sendFile('../public/index.html');
 });
 
-app.use('/api', firebaseDb)
+//app.use('/api', firebaseDb)
 app.listen(httpPort, function () {
 	console.log(`Listening on port ${httpPort}!`);
 });
