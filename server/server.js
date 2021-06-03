@@ -1,16 +1,20 @@
-const express = require('express')
-const path = require('path')
+require('dotenv').config();
+const express = require('express');
+const firebaseDb = require('./firebase.js')
 
-const httpPort = 8080
+const app = express();
 
-const app = express()
+const httpPort = 8080;
 
-app.use(express.static(path.join(__dirname, 'public')))
+//const router = express.Router();
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'))
-})
+app.use(express.static('public'));
 
+app.get('/', function (req, res) {
+	res.sendFile('../public/index.html');
+});
+
+app.use('/api', firebaseDb)
 app.listen(httpPort, function () {
-  console.log(`Listening on port ${httpPort}!`)
-})
+	console.log(`Listening on port ${httpPort}!`);
+});

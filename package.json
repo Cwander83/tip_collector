@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Cwander83/tip_collector#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "firebase": "^8.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

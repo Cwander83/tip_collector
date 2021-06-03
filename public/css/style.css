@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
-html,
+
 body {
 	width: 100%;
 	height: 100%;
@@ -15,6 +15,10 @@ header {
 }
 
 main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	margin: auto;
 	max-width: 350px;
 	border-radius: 25%;
@@ -32,10 +36,14 @@ main {
 	margin: 15px 0;
 }
 
-#sign-in {
+/* #sign-in {
 	display: flex;
 }
 #sign-up {
+	display: flex;
+} */
+
+.form--hidden {
 	display: none;
 }
 
@@ -53,36 +61,18 @@ main {
 	margin: auto;
 	display: none;
 }
-#sign-in,
-#sign-up {
-	justify-content: center;
-	flex-direction: column;
-}
 
-.login-form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.sign-up-form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-/* .login-label {
-	display: inline;
-} */
-
-#login-btn {
+.form-link {
 	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: transparent;
-	border: none;
-	border-bottom: 1px solid black;
+	text-decoration: none;
 	font-style: italic;
+	font-size: 16px;
 	font-weight: 600;
+}
+
+.form__message--error {
+	color: red;
+}
+.form__message--success {
+	color: blue;
 }
