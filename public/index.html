@@ -6,77 +6,125 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tip Tracker</title>
 
-		<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+		<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
 
-		<link rel="stylesheet" href="css/styles.css" />
-		<link rel="manifest" href="/manifest.json" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link rel="manifest" href="./manifest.json" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
 		<meta name="theme-color" content="#ffffff" />
 	</head>
 	<body>
 		<header></header>
-		<main>
+		<main class="container">
 			<h1 class="title">Tip Tracker</h1>
+			<div class="spacer"></div>
 
-			<div id="sign-in">
+			<form id="login" class="form">
 				<h2 class="sub-title">Login</h2>
+				<div class="form__message form__message--error"></div>
 
-				<form class="login-form" action="">
-					<label class="login-label" for="username">Username </label>
+				<div class="form__input-group">
 					<input
+						autofocus
+						placeholder="Username"
 						class="username-input"
 						type="text"
 						name="username"
-						id="username"
+						required
 					/>
-
-					<label class="login-label" for="password">Password </label>
+					<div class="form__input--error-message"></div>
+				</div>
+				<div class="form__input-group">
 					<input
+						autofocus
+						placeholder="Password"
 						class="password-input"
 						type="password"
 						name="password"
-						id="password"
+						required
 					/>
-				</form>
-				<button class="password-btn" onclick="lostPassword()">
+					<div class="form__input--error-message"></div>
+				</div>
+				<button class="form__submit-button" type="submit">Submit</button>
+
+				<!-- <button class="password-btn" onclick="lostPassword()">
 					forgot password?
 				</button>
 				<div id="lost-password">
 					<form action="">
 						<label for="password-recovery"> Enter Email </label>
-						<input type="email" name="email" id="password-recovery" />
+						<input
+						autofocus type="email" name="email" id="password-recovery" />
 					</form>
-				</div>
-			</div>
-			<div id="sign-up">
+				</div> -->
+				<a class="form-link" href="./" id="linkSignUp"
+					>Don't have an account? Create account</a
+				>
+			</form>
+
+			<form id="signUp" class="form form--hidden">
 				<h2 class="sub-title">Sign Up</h2>
-				<span>Please create login account</span>
-				<form class="sign-up-form" action="">
-					<label class="login-label" for="username">Username </label>
+
+				<div class="form__message form__message--error"></div>
+				<div class="form__input-group">
 					<input
+						autofocus
+						placeholder="Username"
 						class="username-input"
 						type="text"
 						name="username"
-						id="username-sign-up"
+						required
+						minlength="8"
 					/>
-
-					<label class="login-label" for="password">Password </label>
+					<div class="form__input--error-message"></div>
+				</div>
+				<div class="form__input-group">
 					<input
-						class="password-input"
-						type="password"
-						name="password"
-						id="password-sign-up"
-					/>
-					<label class="login-label" for="email">Email </label>
-					<input
+						autofocus
+						placeholder="Email"
 						class="email-input"
 						type="email"
 						name="email"
-						id="email-sign-up"
+						required
 					/>
-				</form>
-			</div>
-			<button onclick="showSignUp()" id="login-btn">Sign Up</button>
+					<div class="form__input--error-message"></div>
+				</div>
+				<div class="form__input-group">
+					<input
+						autofocus
+						placeholder="Password"
+						class="password-input"
+						type="password"
+						name="password"
+						required
+						minlength="10"
+					/>
+					<div class="form__input--error-message"></div>
+				</div>
+				<div class="form__input-group">
+					<input
+						autofocus
+						placeholder="Confirm Password"
+						class="password-input"
+						type="password"
+						name="password"
+						required
+						minlength="10"
+					/>
+					<div class="form__input--error-message"></div>
+				</div>
+				<button class="form__submit-button" type="submit">Submit</button>
+
+				<a class="form-link" href="./" id="linkLogin"
+					>Already have an account? Sign in</a
+				>
+			</form>
 		</main>
-		<script src="js/index.js"></script>
+		<script type="text/javascript" src="./js/index.js"></script>
 	</body>
 </html>
